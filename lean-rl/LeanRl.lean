@@ -42,12 +42,7 @@ noncomputable
 def E p h (f : Bool → ℝ ) :=
     ∫ i, (f i) ∂ ((PMF.bernoulli p h).toMeasure)
 
-noncomputable
-def E1 E h (f : Bool → ℝ ) :=
-    ∫ i, (f i) ∂ ((PMF.bernoulli E h).toMeasure)
-
 #check E
-#check E1
 
 -- E is noncomputable since in real, if an integral needs to be computed, we do so over the data. but since this is theoretical,
 -- although for binomial we can actually compute as it finite and countable, but for Expectations, due to integrals and continuous spaces, we leave it noncomputable.
@@ -68,6 +63,45 @@ def E1 E h (f : Bool → ℝ ) :=
 def PMF1.{u} (α : Type u) : Type u :=
   { f : α → ℝ≥0∞ // HasSum f 1 }
 
+#check PMF1
+
+def fxy x y (f : ℝ → ℝ ) :=
+
+    ∫ (f x y) ∂(y)
+
+def marginal (µ : measure α) (F : Π i : ι, α → (β i)) (mv : set ι) :
+measure (Π i : mv, β i) :=
+joint µ (mv.restrict F)
+
+noncomputable
+def fy y (f : ℝ → ℝ ) := by
+    ∫ x,y (f x y) ∂(x)
+
+#check E
+#check condexp_indep_eq
+#check condexp_ind_L1_fin
+
+variable {Ω : Type*} [MeasurableSpace Ω] {X : Ω → ℝ } (hX : Measurable X)
+
+variable {Ω : Type*} [MeasurableSpace Ω] {Y : Ω → ℝ } (hY : Measurable Y)
+
+noncomputable
+
+def E p h (f : Bool → ℝ ) :=
+
+    ∫ i, (f i) ∂((PMF1 p h).toMeasure)
+
+
+
+def fy y (f : ℝ → ℝ ) :=
+
+    ∫ (fxy x y) ∂((PMF1 x y).toMeasure)
+
+def fxgiveny xy (h : Ω → ℝ ) :=
+
+    -- fxy dividedby fy
+
+    sorry
 
 -- END
 -- Nov 4th 2024

@@ -59,3 +59,40 @@ There is one keyword called as noncomputable which is interesting which explains
 - The order matters, so stack operation is also associative. This property allows for n > 2 i.e. each time two elements are combined to give one element, so you can combine more than 2 elements over sequence of operations.
 - When number of elements is 1, then monoid allows a neutral element (empty element i.e. n = 0) to stack on top of one element, which gives original element.
 - Monoid results in one element. n = 1
+
+#### 11/7/2024
+
+#### Drafting steps to follow for designing proofs in LeanProver
+
+1. Write down the original proof of theorem/claim/lemma.
+2. Write down relevant lemmas, axioms required for written proof.
+3. Check Lean Prover documentation to find out what axioms, lemmas, proofs are available.
+4. In my experience, what we want to prove, and the proof we write might be different from what Lean Prover provides. 
+5. Alternative to 4, would be to write all required axioms, proofs from the scratch in Lean Prover, which may be reinventing the wheel.
+6. Tactics is an important part of proof. For some claims, we want to prove LHS = RHS and RHS = LHS. 
+
+#### Proof Planning
+- Handwritten proof
+- Steps require <a href="https://observablehq.com/d/742fa8cd27bad42e">Proof Viewer</a> on Lean
+- Using tactics in Lean versus tactics in Symbolic Computation
+- Based on available "theory" in LeanProver, what additional theory can be derived?
+- Based on missing "theory" in LeanProver, what new implementations are required?
+- Not sure but maybe Marginal, Joint PDFs is missing even using Omega notations??
+- No idea how to use Omega notation, MeasureTheory to define and distinguish between "Finite" and "Continuous" distributions of Random Variables.
+
+#### Missing functions for proving E[E[x|y]] = E[x]
+- Joint Probability Density Function f_X,Y(x,y)
+- Marginal Probability Density Function f_Y(y)
+- Conditional Probability Density Function f_X|Y(x,y)
+- E[g(y)] = ∫ g(y) f_Y(y) dy
+- E[E[x|y]] = ∫ E[x|y] f_Y(y) dy 
+- E[x|y] = ∫ x f_X|Y(x,y) dx
+- E[x] = ∫ x f_X(x) dx
+- f_X|Y (x,y) = f_X,Y (x,y) / f_Y(y)
+- f_X(x) = ∫_x f_X,Y (x,y) dy
+- 
+
+#### Research work
+
+- <a href="https://escholarship.org/uc/item/8hb1w6js"> Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover </a>
+- From UC San Diego Vaishnav, Rishikesh HirenduAdvisor(s): Gao, Sicun.
