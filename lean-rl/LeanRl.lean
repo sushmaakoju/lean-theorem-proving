@@ -2,11 +2,13 @@
 -- Author: Sushma Akoju*****************SAkoju
 -- This module serves as the root of the `LeanRl` library.
 -- Import modules here that should be built as part of the library.
-import LeanRl.Basic
+import LeanRL.Basic
 import Mathlib
 import Mathlib.Probability.ProbabilityMassFunction.Constructions
 import Mathlib.Probability.ProbabilityMassFunction.Binomial
 import Mathlib.Probability.Notation
+import LeanRL
+-- import LeanRL.DeterministicDP
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal
@@ -65,43 +67,45 @@ def PMF1.{u} (α : Type u) : Type u :=
 
 #check PMF1
 
-def fxy x y (f : ℝ → ℝ ) :=
+-- def fxy x y (f : ℝ → ℝ ) :=
 
-    ∫ (f x y) ∂(y)
+--     ∫ (f x y) ∂(y)
 
-def marginal (µ : measure α) (F : Π i : ι, α → (β i)) (mv : set ι) :
-measure (Π i : mv, β i) :=
-joint µ (mv.restrict F)
+-- def marginal (µ : measure α) (F : Π i : ι, α → (β i)) (mv : set ι) :
+--     measure (Π i : mv, β i) :=
+--     joint µ (mv.restrict F)
 
-noncomputable
-def fy y (f : ℝ → ℝ ) := by
-    ∫ x,y (f x y) ∂(x)
+-- #check marginal
+
+-- noncomputable
+-- def fy y (f : ℝ → ℝ ) := by
+--     ∫ x,y (f x y) ∂(x)
 
 #check E
 #check condexp_indep_eq
-#check condexp_ind_L1_fin
+-- #check condexp_ind_L1_fin
 
 variable {Ω : Type*} [MeasurableSpace Ω] {X : Ω → ℝ } (hX : Measurable X)
 
 variable {Ω : Type*} [MeasurableSpace Ω] {Y : Ω → ℝ } (hY : Measurable Y)
 
-noncomputable
+-- noncomputable
 
-def E p h (f : Bool → ℝ ) :=
+-- def E1 p h (f : Bool → ℝ ) :=
 
-    ∫ i, (f i) ∂((PMF1 p h).toMeasure)
+--     ∫ i, (f i) ∂((PMF1 p h).toMeasure)
 
 
 
-def fy y (f : ℝ → ℝ ) :=
+-- def fy y (f : ℝ → ℝ ) :=
 
-    ∫ (fxy x y) ∂((PMF1 x y).toMeasure)
+--     ∫ (fxy x y) ∂((PMF1 x y).toMeasure)
 
-def fxgiveny xy (h : Ω → ℝ ) :=
+-- def fxgiveny xy (h : Ω → ℝ ) :=
 
-    -- fxy dividedby fy
+--     -- fxy dividedby fy
 
-    sorry
+--     sorry
 
 -- END
 -- Nov 4th 2024

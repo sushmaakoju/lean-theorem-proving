@@ -1,14 +1,19 @@
 # lean-theorem-proving
-
 # lean-rl
+This meeting is part of RLLab at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik.
 
-### Notes
+## Notes
+The following contains weekly summaries from Oct 1st 2024.
+Presently this covers from Nov 4th 2024, work-in-progress to update from Oct 1st 2024. Please click on corresponding time-wise options to see the respective statuses.
 
-#### 11/4/2024
+<details open>
+<summary> Click to expand/collapse: 11/4/2024</summary>
+
+### 11/4/2024
 
 To understand the implementation of Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic, I completed two MIT courses: "Introduction of Functional Analysis" and "MeasureTheory". Both are available on MIT Opencourseware. After completing this course, understanding MeasureTheory implementation on LeanProver - helped to make sense why the Lean developers implemented it the way they did. These two courses are each 8 - 10 hours duration along with pausing to understand some additional stuff. MIT Opencourseware has a 100+ page lecture notes for each one of this. But I found youtube videos for this MIT open courseware better.
 
-YouTube playlist, lectures 1, 2,4,6,7,8,9, and 10 are sufficient. <a href"https://youtube.com/playlist?list=PLUl4u3cNGP63micsJp_--fRAjZXPrQzW_&si=AyvFCQERdrNjy_Gh">Introduction to Functional Analysis</a>
+YouTube playlist, lectures 1, 2,4,6,7,8,9, and 10 are sufficient. <a href="https://youtube.com/playlist?list=PLUl4u3cNGP63micsJp_--fRAjZXPrQzW_&si=AyvFCQERdrNjy_Gh">Introduction to Functional Analysis</a>
 
 The LeanProver's implementation is bottom up - for example, to build a theorem on conditional expectation, define sigma-algebras, measures, function maps in Measurespace, define probability as a Measure space, define random variable as a map to probability to generate a measurespace.
 
@@ -60,8 +65,12 @@ There is one keyword called as noncomputable which is interesting which explains
 - The order matters, so stack operation is also associative. This property allows for n > 2 i.e. each time two elements are combined to give one element, so you can combine more than 2 elements over sequence of operations.
 - When number of elements is 1, then monoid allows a neutral element (empty element i.e. n = 0) to stack on top of one element, which gives original element.
 - Monoid results in one element. n = 1
+</details>
 
-#### 11/7/2024
+<details open>
+<summary>Click to expand/collapse 11/7/2024</summary>
+
+### 11/7/2024
 
 #### Drafting steps to follow for designing proofs in LeanProver
 
@@ -91,9 +100,24 @@ There is one keyword called as noncomputable which is interesting which explains
 - E[x] = ∫ x f_X(x) dx
 - f_X|Y (x,y) = f_X,Y (x,y) / f_Y(y)
 - f_X(x) = ∫_x f_X,Y (x,y) dy
-- 
 
-#### Research work
+### Research work
 
 - <a href="https://escholarship.org/uc/item/8hb1w6js"> Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover </a>
-- From UC San Diego Vaishnav, Rishikesh HirenduAdvisor(s): Gao, Sicun.
+From UC San Diego Vaishnav, Rishikesh HirenduAdvisor(s): Gao, Sicun.
+
+</details>
+
+
+<details open>
+<summary> Click to expand or collapse 11/8/2024</summary>
+
+### Tactics
+
+#### RFL - Reflexive
+
+- <a href="https://lovettsoftware.com/NaturalNumbers/Tactics/rfl.lean.html">Tactic reflexive applied on any type no matter how complex the type maybe<a>
+
+- Reference: <a href="https://lovettsoftware.com/NaturalNumbers/Tactics.lean.html"> Tactics in Lean</a>
+
+</details>
