@@ -1,6 +1,6 @@
 # lean-theorem-proving
 # lean-rl
-This is part of Lean meeting RLLab at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik. Presently active members there Prof. Marek Petrik and myself are working on this.
+This is part of Lean meeting at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik. Presently active members there Prof. Marek Petrik and myself that are working on this.
 
 ## Notes
 The following contains weekly summaries from Oct 1st 2024.
