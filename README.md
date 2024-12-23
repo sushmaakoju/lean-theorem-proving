@@ -1,6 +1,7 @@
 # lean-theorem-proving
 # lean-rl
-This is part of Lean meeting at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik. Presently active members there Prof. Marek Petrik and myself that are working on this.
+## Sep 10 2024 - Dec 5th 2024
+This is part of Lean meeting at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik. I am a volunteer participant for giving knowledge transfer. 
 
 ## Notes
 The following contains weekly summaries from Oct 1st 2024.

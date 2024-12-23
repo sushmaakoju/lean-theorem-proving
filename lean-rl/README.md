@@ -1,5 +1,7 @@
 # lean-rl
-This meeting is part of RLLab at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik.
+## Sep 10 2024 - Dec 5th 2024
+
+This meeting is part of RLLab at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik. I am a volunteer participant for giving knowledge transfer. 
 
 ## Notes
 The following contains weekly summaries from Oct 1st 2024.
