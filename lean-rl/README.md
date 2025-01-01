@@ -1,7 +1,7 @@
 # lean-rl
 ## Sep 10 2024 - Dec 5th 2024
 
-This meeting is part of RLLab at University of New Hampshire, Fall 2024 under the supervision of Prof. Marek Petrik. I am a volunteer participant for giving knowledge transfer. 
+I started initially as a volunteer participant for giving knowledge transfer and as a courtesy participation, for the CS department, UNH. Thanks for the invite to participate and RLLab organized by Prof. Marek Petrik for Fall 2024.
 
 ## Notes
 The following contains weekly summaries from Oct 1st 2024.
